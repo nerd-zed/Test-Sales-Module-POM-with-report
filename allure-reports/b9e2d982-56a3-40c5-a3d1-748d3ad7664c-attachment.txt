@@ -1,0 +1,4 @@
+INFO     test_sales_module:test_sales_creation.py:21 Logged In Successfully
+INFO     test_sales_module:test_sales_creation.py:56 Record Created Successfully
+INFO     test_sales_module:test_sales_creation.py:62 Record Deleted Successfully
+INFO     test_sales_module:test_sales_creation.py:66 Logged Out Successfully
