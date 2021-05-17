@@ -1,3 +1,5 @@
+import time
+
 from pageObjects.BasePage import BasePage
 from selenium.webdriver.common.by import By
 

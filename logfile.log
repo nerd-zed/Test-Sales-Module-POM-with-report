@@ -206,3 +206,38 @@
 2021-04-09 15:17:45,001 :INFO : test_sales_module :Error Occurred
 2021-04-09 15:17:50,081 :INFO : test_sales_module :Logged Out Successfully
 2021-04-09 15:17:50,081 :INFO : test_sales_module :Logged Out Successfully
+2021-05-17 15:55:30,505 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 15:55:58,396 :INFO : test_sales_module :Error Occurred
+2021-05-17 15:56:17,660 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 15:56:17,660 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 15:56:37,867 :INFO : test_sales_module :Error Occurred
+2021-05-17 15:56:37,867 :INFO : test_sales_module :Error Occurred
+2021-05-17 15:56:44,007 :INFO : test_sales_module :Logged Out Successfully
+2021-05-17 15:56:44,007 :INFO : test_sales_module :Logged Out Successfully
+2021-05-17 16:01:38,703 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:05:03,344 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:09:27,504 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:11:48,549 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:13:10,174 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:13:25,843 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:13:25,843 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:22:29,025 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:23:50,583 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:24:04,905 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:24:04,905 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:24:33,855 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:25:55,139 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:26:54,538 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:28:15,836 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:30:42,485 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:31:48,167 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:35:19,324 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:35:46,209 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:35:46,209 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:39:17,796 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:41:31,709 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:42:43,889 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:44:55,325 :INFO : test_sales_module :Logged In Successfully
+2021-05-17 16:46:37,681 :INFO : test_sales_module :Record Created Successfully
+2021-05-17 16:46:47,610 :INFO : test_sales_module :Record Deleted Successfully
+2021-05-17 16:46:52,750 :INFO : test_sales_module :Logged Out Successfully

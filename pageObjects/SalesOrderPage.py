@@ -130,6 +130,7 @@ class SalesOrderPage(BasePage):
         ScreenShot.takeScreenshot(self.driver, 'order_created')
 
     def click_create_invoice(self):
+        time.sleep(2)
         self.click(self.CREATE_INVOICE)
         time.sleep(2)
         ScreenShot.takeScreenshot(self.driver, 'create_invoice')
@@ -148,6 +149,7 @@ class SalesOrderPage(BasePage):
         self.click(self.VALIDATE_REGISTER)
 
     def click_send_print(self):
+        time.sleep(2)
         self.click(self.SEND_PRINT)
 
     def click_email_checkbox(self):
