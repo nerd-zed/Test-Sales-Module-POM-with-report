@@ -47,6 +47,7 @@ class SalesOrderPage(BasePage):
         super().__init__(driver)
 
     def click_actions_and_delete(self):
+        time.sleep(2)
         self.click(self.ACTIONS)
         actionMenuList = self.driver.find_elements(*self.ACTION_MENU)
         for ele1 in actionMenuList:
@@ -125,7 +126,7 @@ class SalesOrderPage(BasePage):
     def click_confirm(self):
         global orderNumber
         self.click(self.CONFIRM_BTN)
-        time.sleep(1)
+        time.sleep(3)
         orderNumber = self.getText(self.TITLE)
         ScreenShot.takeScreenshot(self.driver, 'order_created')
 

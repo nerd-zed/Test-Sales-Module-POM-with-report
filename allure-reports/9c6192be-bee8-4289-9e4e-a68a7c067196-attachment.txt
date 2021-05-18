@@ -1,3 +1,0 @@
-INFO     test_sales_module:test_sales_creation.py:21 Logged In Successfully
-INFO     test_sales_module:test_sales_creation.py:68 Error Occurred
-INFO     test_sales_module:test_sales_creation.py:72 Logged Out Successfully

@@ -1,20 +1,10 @@
 from selenium import webdriver
 
 
-driver = ''
-
-
-class BrowserInitialization:
-
-    @staticmethod
-    def generateDriver(browser, url):
-        global driver
-        if browser == 'firefox':
-            driver = webdriver.Firefox()
-        elif browser == 'chrome':
-            driver = webdriver.Chrome()
-        elif browser == 'edge':
-            driver = webdriver.Edge()
-        driver.get(url)
-        driver.maximize_window()
-        return driver
+def generateDriver(browser):
+    if browser == 'firefox':
+        return webdriver.Firefox()
+    elif browser == 'chrome':
+        return webdriver.Chrome()
+    else:
+        return webdriver.Edge()

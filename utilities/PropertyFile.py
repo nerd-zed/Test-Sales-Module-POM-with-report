@@ -6,17 +6,34 @@ with open('conf.properties', 'rb') as read_prop:
     conf.load(read_prop)
 
 
-def getValues(key):
-    if key == 'excelFilePath':
-        value = conf.get('excelFilePath').data
-    elif key == 'logintd':
-        value = conf.get('logintd').data
-    elif key == 'salestd':
-        value = conf.get('salestd').data
-    elif key == 'url':
-        value = conf.get('url').data
-    elif key == 'username':
-        value = conf.get('username').data
-    elif key == 'password':
-        value = conf.get('password').data
-    return value
+class ReadConfig:
+
+    @staticmethod
+    def getApplicationURL():
+        url = conf.get('url').data
+        return url
+
+    @staticmethod
+    def getUsername():
+        username = conf.get('username').data
+        return username
+
+    @staticmethod
+    def getPassword():
+        password = conf.get('password').data
+        return password
+
+    @staticmethod
+    def getExcelFileName():
+        fileName = conf.get('excelFilePath').data
+        return fileName
+
+    @staticmethod
+    def getExcelSheet():
+        sheetName = conf.get('salestd').data
+        return sheetName
+
+    @staticmethod
+    def getModuleName():
+        moduleName = conf.get('module_name').data
+        return moduleName
