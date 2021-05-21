@@ -1,0 +1,4 @@
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:25 Logged In Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:35 Customer Not found
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:62 Application error
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:70 Logged Out Successfully

@@ -33,20 +33,15 @@ class TestSalesModule(BaseClass):
         statusList = salesorderpage.select_customer(getData['customername'])
         if statusList[0] is not True & statusList[1] is not False:
             self.logger.info('Customer Not found')
-        salesorderpage.select_validity(getData['validity'])
-        salesorderpage.add_product(getData['product1'])
+        else:
+            salesorderpage.select_validity(getData['validity'])
+            salesorderpage.add_product(getData['product1'])
 
-        salesorderpage.select_payment_terms(getData['paymentterms'])
-        salesorderpage.click_confirm()
-        time.sleep(10)
+            salesorderpage.select_payment_terms(getData['paymentterms'])
+            salesorderpage.click_confirm()
+            # time.sleep(10)
 
-        print('********************')
-        print(salesorderpage.isTitleNew())
-        print('********************')
         if salesorderpage.isTitleNew() is False:
-            print('********************')
-            print(getData['expected'])
-            print('********************')
             if getData['expected'] == 'Pass':
                 self.logger.info('Record Created Successfully')
                 salesorderpage.open_sales_list()
@@ -68,15 +63,15 @@ class TestSalesModule(BaseClass):
                 TestData.write_result('Fail', 'Fail')
                 self.testStatus.append('False')
             elif getData['expected'] == 'Fail':
+                self.logger.info('Record creation failed successfully')
                 TestData.write_result('Fail', 'Pass')
                 self.testStatus.append('True')
+
+        assert 'True' == self.testStatus[-1]
+        self.logger.info('Test Run successfully')
+
         homepage.do_logout()
         self.logger.info('Logged Out Successfully')
-        print('********************')
-        print(self.testStatus)
-        print('********************')
-        assert 'Fail' not in self.testStatus
-        self.logger.info('Test Run successfully')
 
     @pytest.fixture(params=TestData.getSalesTestData())
     def getData(self, request):

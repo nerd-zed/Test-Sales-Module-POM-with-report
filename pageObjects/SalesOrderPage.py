@@ -145,8 +145,10 @@ class SalesOrderPage(BasePage):
         self.click(self.CONFIRM_BTN)
         time.sleep(3)
         orderNumber = self.getText(self.TITLE)
-        ScreenShot.takeScreenshot(self.driver, 'order_created')
-
+        if orderNumber != 'New':
+            ScreenShot.takeScreenshot(self.driver, 'order_created')
+        else:
+            ScreenShot.takeScreenshot(self.driver, 'failed_to_create_order')
     def click_create_invoice(self):
         time.sleep(2)
         self.click(self.CREATE_INVOICE)
