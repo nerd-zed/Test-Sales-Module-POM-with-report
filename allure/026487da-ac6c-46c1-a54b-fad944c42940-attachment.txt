@@ -1,0 +1,3 @@
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:25 Logged In Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:74 Logged Out Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:76 Test Run successfully

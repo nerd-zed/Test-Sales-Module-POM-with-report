@@ -1,0 +1,5 @@
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:25 Logged In Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:51 Record Created Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:56 Record Deleted Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:74 Logged Out Successfully
+[32mINFO    [0m TestSalesModule:test_sales_creation.py:79 Test Run successfully

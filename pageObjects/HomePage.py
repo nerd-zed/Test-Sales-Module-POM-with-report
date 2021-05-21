@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from pageObjects.BasePage import BasePage
 from pageObjects.SalesModulePage import SalesModulePage
 from utilities import ScreenShot
-from utilities.PropertyFile import ReadConfig
+from utilities.readProperties import ReadConfig
 
 
 class HomePage(BasePage):
@@ -28,6 +28,6 @@ class HomePage(BasePage):
         module[1] = module[1].format(module=ReadConfig.getModuleName())
         self.click(tuple(module))
 
-        assert True == self.check_text_presence(self.HEADING, 'Sales')
+        assert True == self.check_text_presence(self.HEADING, ReadConfig.getModuleName())
         ScreenShot.takeScreenshot(self.driver, 'opened_sales_app')
         return SalesModulePage(self.driver)

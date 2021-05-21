@@ -2,11 +2,11 @@ import time
 
 import openpyxl
 import os
-from utilities import PropertyFile, ExcelUtil
+from utilities import ExcelUtil
 import datetime
 from win32com import client
 
-from utilities.PropertyFile import ReadConfig
+from utilities.readProperties import ReadConfig
 
 excel = client.Dispatch(dispatch="Excel.Application")
 wb = excel.Workbooks.Add()
@@ -56,8 +56,20 @@ class TestData:
             Dict['product3'] = ExcelUtil.read_data(filePath, testSheet, i + 4, 4)
             Dict['paymentterms'] = ExcelUtil.read_data(filePath, testSheet, i + 5, 4)
             Dict['downpayment'] = ExcelUtil.read_data(filePath, testSheet, i + 6, 4)
+            Dict['expected'] = ExcelUtil.read_data(filePath, testSheet, i, 5)
             dataList.append(Dict)
         return dataList
+
+    @staticmethod
+    def write_result(actual, passfail):
+        global row
+        ExcelUtil.write_data(path,
+                             ReadConfig.getExcelSheet(), row, 6,
+                             actual)
+        ExcelUtil.write_data(path,
+                             ReadConfig.getExcelSheet(), row, 7,
+                             passfail)
+        row = row + 7
 
     @staticmethod
     def write_valid_result():

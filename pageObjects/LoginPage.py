@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 from pageObjects.BasePage import BasePage
 from pageObjects.HomePage import HomePage
-from utilities import ScreenShot, ExcelUtil, PropertyFile
+from utilities import ScreenShot
 
 
 class LoginPage(BasePage):

@@ -20,6 +20,7 @@ class SalesOrderPage(BasePage):
     CUSTOMERFIELD = (By.XPATH, "(//div[@class='o_input_dropdown']//input)[1]")
     SEARCHMORE = (By.XPATH, "(//li[@class='o_m2o_dropdown_option ui-menu-item']//a)[1]")
     SELECTCUSTOMER = (By.XPATH, "(//tr[@class='o_data_row'])")
+    SEARCH_CANCEL = (By.XPATH, "(//footer[@class='modal-footer']//button)[2]")
     VALIDITY = (By.XPATH, "(//input[@name='validity_date'])[1]")
     DATE_PICKER = (By.XPATH, "//div[@class='datepicker']//div")
     QUOTATION_TEMPLATE = (By.XPATH, "(//label[text()='Quotation Template']/following::input)[1]")
@@ -45,6 +46,12 @@ class SalesOrderPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
+
+    def isTitleNew(self):
+        if self.getText(self.TITLE) == 'New':
+            return True
+        else:
+            return False
 
     def click_actions_and_delete(self):
         time.sleep(2)
@@ -94,17 +101,27 @@ class SalesOrderPage(BasePage):
         self.click(self.CREATE_BTN)
 
     def select_customer(self, value):
-        self.click(self.CUSTOMERFIELD)
-        self.click(self.SEARCHMORE)
-        time.sleep(1)
-        customerTrList = self.driver.find_elements(*self.SELECTCUSTOMER)
-        for ele1 in customerTrList:
-            ele2 = ele1.find_elements_by_xpath("./child::*")[0]
-            if ele2.text == value:
-                ele2.click()
-                break
+        statusFlag = False
+        notFound = False
+        if value is not None:
+            self.click(self.CUSTOMERFIELD)
+            self.click(self.SEARCHMORE)
+            time.sleep(1)
+            customerTrList = self.driver.find_elements(*self.SELECTCUSTOMER)
+            for ele1 in customerTrList:
+                ele2 = ele1.find_elements_by_xpath("./child::*")[0]
+                if ele2.text == value:
+                    ele2.click()
+                    statusFlag = True
+                    break
+            if statusFlag is False:
+                notFound = True
+                self.click(self.SEARCH_CANCEL)
+            time.sleep(3)
 
-        time.sleep(3)
+        else:
+            statusFlag = False
+        return [statusFlag, notFound]
 
     def select_quotation(self, value):
         self.click(self.QUOTATION_TEMPLATE)
